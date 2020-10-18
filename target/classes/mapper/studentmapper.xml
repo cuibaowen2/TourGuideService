@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tourguide.mapper.StudentMapper">
+    <resultMap id="resultSutdent" type="com.tourguide.model.Student">
+        <result column="id" property="id"/>
+        <result column="name" property="userName"/>
+        <result column="age" property="userAge"/>
+        <result column="school" property="school"/>
+    </resultMap>
+    <select id="getSudents" resultMap="resultSutdent">
+        SELECT * FROM student
+    </select>
+
+</mapper>
